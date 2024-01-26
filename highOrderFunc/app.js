@@ -42,7 +42,7 @@ const studentApi =
   "https://raw.githubusercontent.com/sedc-codecademy/skwd9-04-ajs/main/Samples/students_v2.json";
 const fetchStudentApi = (studentApi) => {
   fetch(studentApi)
-    .then((res) => res, json())
+    .then((res) => res.json())
     .then((data) => {
       // - All students with an average grade higher than 3
       const filteredStudents = data.filter(
